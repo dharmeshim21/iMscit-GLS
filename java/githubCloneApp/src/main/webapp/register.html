@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<link rel="stylesheet" href="register.css"/> 
+</head>
+<body>
+	<div class="container">
+		<img width=100px src="logo.jpg" alt="Logo"/>
+		<h1>Sign in to GutHub</h1>
+		<div class="subContainer">
+			<form action="home" method="post">
+				<div class="field">
+					<label>Full Name</label>
+					<input type="text" name="name">
+				</div>
+				<div class="field">
+					<label>E-mail</label>
+					<input type="text" name="mail">
+				</div>
+				<div class="field">
+					<label>Country</label>
+					<select name="country" class="coun">
+						<option>---Select Country---</option>
+						<option>Russia</option>
+						<option>USA</option>
+						<option>Spain</option>
+						<option>Japan</option>
+						<option>India</option>
+						<option>China</option>
+					</select>
+				</div>
+				<div class="field">
+					<label>Password</label>
+					<input type="password" name="name">
+				</div>
+				<div class="field">
+					<label>Confirm Passowrd</label>
+					<input type="password" name="mail">
+				</div>
+			</form>
+	
+			<div class="btn">
+				<button>Sign up</button>
+			</div>
+			<div class="btn1">
+				<button onclick=loginpage()>Sign in</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		function loginpage(){
+			window.location.href = "login.html"
+		}
+	</script>
+</body>
+</html>
