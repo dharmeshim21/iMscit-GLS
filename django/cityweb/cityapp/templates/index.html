@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(27, 25, 25);
+        color: rgb(213, 192, 192);
+    }
+
+    header {
+        background-color: rgb(87, 85, 85);
+        margin-top: 10px;
+        position: sticky;
+        top: 0;
+    }
+
+    ul {
+        display: flex;
+        gap: 10px;
+    }
+
+    ul li {
+        list-style: none;
+        cursor: pointer;
+        padding: 10px 4px;
+        font-weight: bolder;
+    }
+
+    main {
+        background-color: gray;
+        margin-top: 20px;
+        height: 70vh;
+    }
+
+    .container {
+        /* height: 70%; */
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .cities {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .city {
+        background-color: cadetblue;
+        width: 40vw;
+        padding: 20px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: all 0.1s ease-in 0.1s;
+    }
+
+    .city:hover {
+        background-color: rgb(137, 192, 192);
+    }
+
+    .city a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+    .footer{
+        background-color: rgb(87, 85, 85);
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .foot{
+        word-break: break-all;
+        
+    }
+    .about{
+        padding: 5px 10px;
+    }
+    .contact,.copyright{
+        border-left:1px solid black;
+        padding: 5px 10px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Login</li>
+                <li>Register</li>
+                <li>Contact</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="cities">
+                <div class="city">
+                    <a href="/amd"><h1>Ahmedabad</h1></a>
+                </div>
+                <div class="city">
+                    <a href="#"><h1>Surat</h1></a>
+                </div>
+                <div class="city">
+                    <a href="#"><h1>Vadodra</h1></a>
+                </div>
+                <div class="city">
+                    <a href="#"><h1>Rajkot</h1></a>
+                </div>
+
+            </div>
+            <div class="logo">
+                <img src="https://www.incredibleindia.org/content/dam/incredible-india-v2/images/logo/Gujarat%20Tourism%20-%20LOGO.jpg"
+                    alt="">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="foot about">
+                <h3>About</h3>
+                <p>Hello! I'm Dharmesh Vaghela, a passionate full-stack developer currently pursuing an Integrated MSc in IT. With a solid foundation in IT, I hold a BSc in IT from GLS University, where I honed my skills and developed a deep understanding of both front-end and back-end technologies.</p>
+            </div>
+            <div class="foot contact">
+                <h3>Contact</h3>
+                <p>Contact Us
+                    We'd love to hear from you! Whether you have a question, feedback, or a project in mind, feel free to reach out to us through any of the following methods:
+                    
+                    <b>Phone</b>
+                    You can call us at: 9909921957
+                    
+                    Email
+                    Send us an email at: vagheladharmesh@gmail.com.</p>
+            </div>
+            <div class="foot copyright">
+                <h3>Copyright</h3>
+                <p>&copy; 2024 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

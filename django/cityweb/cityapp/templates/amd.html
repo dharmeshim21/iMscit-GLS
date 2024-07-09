@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmedabad Best Places</title>
+</head>
+<style>
+    /* Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #444 #222;
+    }
+
+    /* WebKit Browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+        width: 12px;
+        /* Width of the scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #222;
+        /* Background of the scrollbar track */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #444;
+        /* Scrollbar thumb color */
+        border-radius: 10px;
+        /* Roundness of the scrollbar thumb */
+        border: 3px solid #222;
+        /* Border around the thumb */
+    }
+
+    /* Hover effect for the scrollbar thumb */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+        /* Color when hovering over the thumb */
+    }
+
+
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(27, 25, 25);
+        color: rgb(213, 192, 192);
+    }
+
+    .container {
+        margin: 15px;
+    }
+
+    .subContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .head {
+        background-color: grey;
+        color: white;
+        border-radius: 10px;
+        width: 40vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardContainer {
+        margin: 25px 7px;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 90vw;
+    }
+    .cardContainer a{
+        text-decoration: none;
+        color: white;
+    }
+    .card {
+        background-color: rgb(79, 73, 73);
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        padding: 5px 5px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 7px;
+        cursor: pointer;
+        transition: 0.1s ease-in-out 0.2ms;
+    }
+
+    .card img {
+        width: 280px;
+        height: 200px;
+    }
+
+    .card h4 {
+        font-size: larger;
+        font-weight: bolder;
+    }
+
+    .card:hover {
+        background-color: grey;
+        transform: scaleY(1);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="subContainer">
+            <div class="head">
+                <h1>Best Places In Ahmedabd</h1>
+            </div>
+        </div>
+        <div class="cardContainer">
+            <a href="/sciencecity">
+                <div class="card">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipPnCcq6uFFnYLMKd2T-yKmFtZ-NuE09S6Q-Z3L8=w675-h390-n-k-no"
+                        alt="Science City">
+                    <h4>Science City</h4>
+                    <p>Gujarat Science City is a science education and entertainment centre located in Ahmedabad,
+                        Gujarat,
+                        India.</p>
+                </div>
+            </a>
+            <div class="card">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0b/0e/cb/63/sabarmati-riverfront.jpg"
+                    alt="Sabarmati Riverfront">
+                <h4>Sabarmati Riverfront</h4>
+                <p>Sabarmati Riverfront is a waterfront being developed along the banks of Sabarmati river in Ahmedabad,
+                    India.</p>
+            </div>
+            <div class="card">
+                <img src="https://kevinstandagephotography.wordpress.com/wp-content/uploads/2015/04/ksp_9020.jpg"
+                    alt="Science City">
+                <h4>Sidi Saiyyed Mosque</h4>
+                <p>The Sidi Saiyyed Mosque, popularly known as Sidi Saiyyid ni Jali locally, built in 1572–73 AD, is one
+                    of the most famous mosques of Ahmedabad</p>
+            </div>
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Kankaria_Carnival_2_Ahmedabad.JPG">
+                <h4>Kankaria Lake</h4>
+                <p>Kankaria Lake is the second largest lake in Ahmedabad in the Indian state of Gujarat</p>
+            </div>
+            <div class="card">
+                <img src="https://www.fabhotels.com/blog/wp-content/uploads/2020/02/World-Vintage-Car-Museum-Ahmedabad-600.jpg"
+                    alt="Science City">
+                <h4>Auto World Vintage Car Museum</h4>
+                <p>Covered outdoor showcase of high-end vintage automobiles, carriages, motorcycles & other vehicles.
+                </p>
+            </div>
+            <div class="card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEmQ1ObNeWU5qzMFzexUx8bDLeyB1coeeOuA&usqp=CAU">
+                <h4>Adalaj Stepwell</h4>
+                <p>Adalaj Stepwell or Rudabai Stepwell is a stepwell located in the small town of Adalaj, close to
+                    Gandhinagar city in the Indian state of Gujarat</p>
+            </div>
+            <div class="card">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR9aMwCqkFq2qO43h47yS5fBlrumjkDyDFqS8XtTGA0rOhPL-LEmB18QCdyN5XwESJgkk&usqp=CAU">
+                <h4>Law Garden</h4>
+                <p>Law Garden, officially Sheth Motilal Hirabhai Park, is an urban park in Ahmedabad, Gujarat, India</p>
+            </div>
+            <div class="card">
+                <img src="https://heritageofahmedabad.com/wp-content/uploads/2018/03/sabarmati-asharm-2.jpeg">
+                <h4>Mahatma Gandhi Ashram</h4>
+                <p>Sabarmati Ashram is located in the Sabarmati suburb of Ahmedabad, Gujarat.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
