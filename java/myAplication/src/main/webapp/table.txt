@@ -1,0 +1,8 @@
+create table users(
+id int NOT NULL AUTO_INCREMENT,
+email varchar(200) NOT NULL,
+username varchar(20) NOT NULL,
+password varchar(20) NOT NULL,
+gender varchar(20),
+country varchar(200),
+primary key(id));
