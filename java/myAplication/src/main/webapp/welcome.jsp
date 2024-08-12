@@ -50,6 +50,22 @@
     		color:blue;
     		font-size:20px
     	}
+    	main{
+    		width:100%;
+    		height:90vh;
+    		background-color:red;
+    	}
+    	.container{
+    		background-color:green;
+    		width:100%;
+    		height:50%;
+    		display:flex;
+    		flex-direction:column;
+    		align-items:center
+    	}
+    	.container h1{
+    		font-size:34px;
+    	}
     </style>
 </head>
 <body>
@@ -65,5 +81,19 @@
 			<div class="logout"><a href="deleteac.jsp">Delete account ?</a></div>
 		</nav>
 	</header>
+	<main>
+		
+		<div class="container">
+		<h1>Todo</h1>
+			<form action="todo" method="get">
+			<div class="input">
+				<input type="text" name="todo" placeholder="Enter todo">
+			</div>
+			<div class="btn">
+				<button>Add</button>
+			</div>
+			</form>
+		</div>
+	</main>
 </body>
 </html>

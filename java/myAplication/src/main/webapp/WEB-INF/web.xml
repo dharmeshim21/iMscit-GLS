@@ -50,4 +50,14 @@
     <servlet-name>deleteac</servlet-name>
     <url-pattern>/deleteac</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>todo</display-name>
+    <servlet-name>todo</servlet-name>
+    <servlet-class>todo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>todo</servlet-name>
+    <url-pattern>/todo</url-pattern>
+  </servlet-mapping>
 </web-app>
