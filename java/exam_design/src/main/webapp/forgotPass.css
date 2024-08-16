@@ -1,0 +1,78 @@
+@charset "UTF-8";
+*{
+	font-family: "Karla", sans-serif;
+  	font-optical-sizing: auto;
+}
+body{
+	background-color:#A7D7C5;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+	background-color:#F6FBF9;
+	width:30%;
+	margin-top:10vh;
+	padding:10px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    border-radius:14px;
+}
+.container h1{
+	font-size:40px;
+	font-weight: bolder;
+}
+.tagp{
+	width:70%;
+	text-align:center;
+	color:#32403B;
+	 margin-bottom: 25px;
+}
+.field{
+	margin-bottom: 10px;
+}
+.field input{
+	width: 306px;
+    height: 28px;
+   	padding: 10px;
+    border-radius: 7px;
+    background-color:#ffffff;
+    border:1px solid rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+.field input::placeholder{
+	color: rgba(0, 0, 0, 0.5);
+}
+.btn{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	justify-content:center;
+}
+.btn button{
+	height: 48px;
+    width: 240px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    color:white;
+    background-color: #84C7AE;
+    border:2px solid #000000;
+    cursor: pointer;
+}
+.btn button:hover{
+	background-color: #c9f0e1;
+}
+.btn p{
+	padding-top:10px;
+	color:#32403B;
+}
+.btn p>a{
+	color:#32403B;
+	text-decoration:underline;
+}
+.btn p>a:hover{
+	color:#A7D7C5;
+}
