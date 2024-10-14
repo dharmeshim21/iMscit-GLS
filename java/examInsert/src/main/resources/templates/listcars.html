@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Car List</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Car List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Car Name</th>
+                <th>Car Number</th>
+                <th>Car Price</th>
+                <th>Car Owner</th>
+                <th>Gender</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Thymeleaf loop to display cars -->
+            <tr th:each="car : ${cars}">
+                <td th:text="${car.carName}"></td>
+                <td th:text="${car.carNumber}"></td>
+                <td th:text="${car.carPrice}"></td>
+                <td th:text="${car.carOwner}"></td>
+                <td th:text="${car.gender}"></td>
+                <td th:text="${car.city}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

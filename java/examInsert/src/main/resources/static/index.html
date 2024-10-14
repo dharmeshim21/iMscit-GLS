@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		background-color: #A7D7C5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.container{
+		background-color: white;
+		height:80vh;
+		width:30vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		margin-top: 50px;
+		gap:20px;
+	}
+	.field{
+		display: flex;
+		flex-direction: column;
+	}
+	.field label{
+		font-weight: bolder;
+		font-size: larger;
+	}
+	.field input{
+		width: 270px;
+		padding: 10px;
+		border-radius: 5px;
+		margin-top: 5px;
+		height: 22px;
+	}
+	.gender{
+		display: flex;
+		flex-direction: row;
+		align-items:center;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		font-weight: bolder;
+		font-size: larger;
+		gap:10px;
+	}
+	.field select{
+		width: 296px;
+    	padding: 10px;
+    	border-radius: 5px;
+    	margin-top: 5px;
+    	height: 43px;
+	}
+	.btn{
+		width: 100%;
+		display: flex;
+		justify-content:center;
+		flex-direction: row;
+		align-items:center;
+		margin-top: 30px;
+	}
+	.btn button {
+		background-color: #A7D7C5;
+    	width: 129px;
+    	height: 40px;
+    	border-radius: 5px;
+    	cursor: pointer;
+	}
+	.btn button:hover {
+		background-color: white;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Car Register</h1>
+		<form action="/register" method="post">
+			<div class="field">
+				<label>CarName</label>
+				<input type="text" name="carName" placeholder="Enter Car Name">
+			</div>
+			<div class="field">
+				<label>Car Number</label>
+				<input type="text" name="carNumber" placeholder="Enter Car Number">
+			</div>
+			<div class="field">
+				<label>Car Price</label>
+				<input type="number" name="carPrice" placeholder="Enter Car Price">
+			</div>
+			<div class="field">
+				<label>Car Owner</label>
+				<input type="text" name="carOwner" placeholder="Enter Car Owner">
+			</div>
+			<div class="gender">
+				<label>Gender:</label>
+				<input type="radio" name="gender" value="Male">Male
+				<input type="radio" name="gender" value="Female">Female
+			</div>
+			<div class="field">
+				<label>City</label>
+				<select name="city">
+					<option>---Select City---</option>
+					<option value="Ahmedabad">Ahmedabad</option>
+					<option value="Surat">Surat</option>
+					<option value="Rajkot">Rajkot</option>
+					<option value="Jamnagar">Jamnagar</option>
+				</select>
+			</div>
+			<div class="btn">
+				<button>Register</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
