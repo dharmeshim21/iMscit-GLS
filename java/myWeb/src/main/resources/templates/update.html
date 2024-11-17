@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student</title>
+</head>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		background-color: #A7D7C5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.container{
+		background-color: white;
+		display: flex;
+		align-items: center;
+		flex-direction:column;
+		margin-top: 50px;
+		border-radius: 7px;
+		width: 25vw;
+		height: 70vh;
+		padding:20px 0;
+	}
+	.container h1{
+		border-bottom: 3px solid black;
+		margin-bottom: 20px;
+	}
+	.field{
+		display: flex;
+		flex-direction:column;
+		margin:8px 0;
+	}
+	.field label{
+		font-weight: bolder;
+    	font-size: large;
+	}
+	.field input{
+		padding: 5px;
+    	border-radius: 5px;
+    	height: 26px;
+    	width: 228px;
+	}
+	.field select{
+		height: 39px;
+    	border-radius: 5px;
+    	text-align: center;
+	}
+	.gender{
+		display: flex;
+		align-items: center;
+	}
+	.gender p{
+		font-weight: bolder;
+		font-size: larger;
+		margin: 0 5px;
+	}
+	.gender input{
+		height: 34px;
+		width:22px;
+	}
+	.btn{
+		margin-top: 20px;
+    	width: 100%;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+	.btn button{
+		padding: 8px;
+   		border-radius: 5px;
+    	width: 125px;
+    	background-color: #A5D5C5;
+    	font-weight: bolder;
+    	cursor: pointer;
+	}
+</style>
+<body>
+	<div class="container">
+		<h1>Student Update Form</h1>
+		<form action="/updatedata" method="post">
+			<div class="field">
+				<label>First Name</label>
+				<input type="text" name="firstName" placeholder="Enter First Name" th:value="${student.firstName}">
+			</div>
+			<div class="field">
+				<label>Last Name</label>
+				<input type="text" name="lastName" placeholder="Enter Last Name" th:value="${student.lastName}">
+			</div>
+			<div class="field">
+				<label>Email</label>
+				<input type="email" name="email" placeholder="Enter EMial" th:value="${student.email}">
+			</div>
+			<div class="field">
+				<label>Phone </label>
+				<input type="number" name="phone" placeholder="Enter Phone" th:value="${student.phone}">
+			</div>
+			<div class="field">
+				<label>Course</label>
+				<select name="course">
+					<option>-----Select Course-----</option>
+					<option value="iMsc-IT">iMsc-IT</option>
+					<option value="BCA">BCA</option>
+					<option value="MCA">MCA</option>
+					<option value="B.tech">B.tech</option>
+					<option value="MBA">MBA</option>
+				</select>
+			</div>
+			<div class="gender">
+				<input type="radio" name="gender" value="Male"><p>Male</p>
+				<input type="radio" name="gender" value="Female"><p>Female</p>
+			</div>
+			<div class="btn">
+				<button>Update</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

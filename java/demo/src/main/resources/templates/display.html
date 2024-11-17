@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Book Display</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #A7D7C5;
+			
+		}
+		table{
+			background-color: white;
+			margin:10px auto;
+		}
+	</style>
+
+</head>
+ <body>
+ 	<table border="1">
+ 		<tr>
+ 			<th>Id</th>
+ 			<th>Book Name</th>
+ 			<th>Borrower Name</th>
+ 			<th>Phone</th>
+ 			<th>Phone</th>
+ 			<th>Borrow Date</th>
+ 			<th>Return Date</th>
+ 		</tr>
+ 		<tr th:each="book:${books}">
+ 			<td th:text="${book.id}"></td>
+ 			<td th:text="${book.bookName}"></td>
+ 			<td th:text="${book.borrowerName}"></td>
+ 			<td th:text="${book.borrowerPhone}"></td>
+ 			<td th:text="${book.borrowDate}"></td>
+ 			<td th:text="${book.returnDate}"></td>
+ 			<td>
+ 				<a th:href="@{/books/delete/{id}(id=${book.id})}">Delete</a>
+ 			</td>
+ 			<td>
+ 				<a th:href="@{/books/update/{id}(id=${book.id})}">Update</a>
+ 			</td>
+ 		</tr>
+ 	</table>
+ </body>
+</html>

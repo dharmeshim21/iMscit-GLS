@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>Book Store</title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #A7D7C5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.container{
+			background-color: white;
+			margin-top: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 70vh;
+			width: 30vw;
+			flex-direction: column;
+			gap:20px;
+			border-radius: 7px;
+		}
+		.field{
+			display: flex;
+			flex-direction: column;
+			margin:5px 0;
+		}
+		.field label{
+			font-size: larger;
+			font-weight: bold;
+		}
+		.field input{
+			padding: 5px;
+    		height: 37px;
+    		width: 257px;
+    		border-radius: 7px;
+		}
+		.btn{
+			display: flex;
+			align-items: center;
+			justify-content: center;	
+		}
+		.btn button{
+			height: 30px;
+			width: 100px;
+			background-color: #A7D7C5;
+			border-radius: 7px;
+			font-weight: bolder;
+		}
+	</style>
+	<body>
+		<div class="container">
+			<h1>Book Store</h1>
+			<form action="/storedata" method="post">
+				<div class="field">
+					<label>Book Name</label>
+					<input type="text" name="bookName" placeholder="Enter Book Name">
+				</div>
+				<div class="field">
+					<label>Borrower Name</label>
+					<input type="text" name="borrowerName" placeholder="Enter Borrower Name">
+				</div>
+				<div class="field">
+					<label>Borrower Phone</label>
+					<input type="number" name="borrowerPhone" placeholder="Enter Borrower Number">
+				</div>
+				<div class="field">
+					<label>Borrow Date</label>
+					<input type="date" name="borrowDate" placeholder="Enter Borrow Date">
+				</div>
+				<div class="field">
+					<label>Return Date</label>
+					<input type="date" name="returnDate" placeholder="Enter Return Date">
+				</div>
+				<div class="btn">
+					<button>Borrow Now</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
