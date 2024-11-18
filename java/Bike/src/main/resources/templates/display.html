@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>Bike</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background-color: #A5D5C7;
+			
+			}
+			table{
+				background-color: white;
+				width: 50vw;
+				margin: 30px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Bike Id</th>
+				<th>Bike Name</th>
+				<th>Bike Number</th>
+				<th>Bike Owner</th>
+				<th>Owner Phone</th>
+				<th>Bike Color</th>
+				<th>Bike Price</th>
+				<th>BirthDay Date</th>
+			</tr>
+			<tr th:each="bike:${bikes}">
+				<td th:text="${bike.id}"></td>
+				<td th:text="${bike.bikeName}"></td>
+				<td th:text="${bike.bikeNumber}"></td>
+				<td th:text="${bike.owner}"></td>
+				<td th:text="${bike.phone}"></td>
+				<td th:text="${bike.bikeColor}"></td>
+				<td th:text="${bike.bikePrice}"></td>
+				<td th:text="${bike.bod}"></td>
+				<td>
+					<a th:href="@{/bikes/update/{id}(id=${bike.id})}">Update</a>
+				</td>
+				<td>
+					<a th:href="@{/bikes/delete/{id}(id=${bike.id})}">Delete</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

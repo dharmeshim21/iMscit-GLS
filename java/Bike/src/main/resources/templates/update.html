@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student</title>
+</head>
+<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		background-color: #A7D7C5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.container{
+		background-color: white;
+		display: flex;
+		align-items: center;
+		flex-direction:column;
+		margin-top: 50px;
+		border-radius: 7px;
+		width: 25vw;
+		height: 85vh;
+		padding:20px 0;
+	}
+	.container h1{
+		border-bottom: 3px solid black;
+		margin-bottom: 20px;
+	}
+	.field{
+		display: flex;
+		flex-direction:column;
+		margin:8px 0;
+	}
+	.field label{
+		font-weight: bolder;
+    	font-size: large;
+	}
+	.field input{
+		padding: 5px;
+    	border-radius: 5px;
+    	height: 26px;
+    	width: 228px;
+	}
+	
+	.btn{
+		margin-top: 20px;
+    	width: 100%;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+	.btn button{
+		padding: 8px;
+   		border-radius: 5px;
+    	width: 125px;
+    	background-color: #A5D5C5;
+    	font-weight: bolder;
+    	cursor: pointer;
+	}
+</style>
+<body>
+	<div class="container">
+		<h1>Bike Update</h1>
+		<form action="/updatedata" method="post">
+			<input type="hidden" name="id" th:value="${bike.id}">
+			<div class="field">
+				<label>Bike Name</label>
+				<input type="text" name="bikeName" placeholder="Enter Bike Name" th:value="${bike.bikeName}">
+			</div>
+			<div class="field">
+				<label>Bike Number</label>
+				<input type="number" name="bikeNumber" placeholder="Enter Bike Number" th:value="${bike.bikeNumber}">
+			</div>
+			<div class="field">
+				<label>Owner Name</label>
+				<input type="text" name="owner" placeholder="Enter Owner Name" th:value="${bike.owner}">
+			</div>
+			<div class="field">
+				<label>Owner Phone</label>
+				<input type="number" name="phone" placeholder="Enter Phone" th:value="${bike.phone}">
+			</div>
+			<div class="field">
+				<label>Bike Color</label>
+				<input type="color" name="bikeColor" th:value="${bike.bikeColor}">
+			</div>
+			<div class="field">
+				<label>Bike Price</label>
+				<input type="text" name="bikePrice" placeholder="Enter Bike Price" th:value="${bike.bikePrice}">
+			</div>
+			<div class="field">
+				<label>Owner Birth Date</label>
+				<input type="date" name="bod" placeholder="Enter Birth Date" th:value="${bike.bod}">
+			</div>
+			<div class="btn">
+				<button>Update</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
