@@ -1,0 +1,255 @@
+Ex.1
+
+data = data.frame(id = c(101,102,103,104),name = c("Dhruvi","Sahaj","Dharmesh","Sejal"),Department = c("IT","HR","IT","Markrting"),salary= c(70000,60000,50000,40000),Experience = c(6,5,4,3))
+
+
+> summary(data)
+
+> data[3:4,]
+
+> data[3:4,]
+
+> data[2:3]
+
+> data = cbind(data,bonus = c(5000,6000,7000,8000))
+
+new_row = data.frame(id = 105,name="Alpesh",Department="HR",salary=100000,Experience=10,bonus=10000)
+> data = rbind(data,new_row)
+
+> data[data$name == "Alpesh","salary"] = 90000
+
+> data[data$Department == "IT",]
+
+> data[data$salary > 60000, c("name")]
+
+> data[data$Experience > 5, c("name","bonus")]
+
+
+
+
+Ex:2
+1)
+Product = data.frame(
+ProductId = c(1,2,3,4,5),
+ProductName = c('Laptop','Smartphone','T-shirt','Refrigerator','Jeans'),
+Category = c('Electronics','Electronics','Clothing','Appliances','Clothing'),
+Price = c(50000,20000,800,30000,1500),
+Stock = c(15,30,50,10,30))
+
+ 
+dim(Product)
+
+Product[Product$ProductId <= 3,c('Price','Stock')]
+
+Product[Product$Category == 'Electronics',]
+
+2. Modify the Data Frame
+Discount = c('10%','5%','15%','8%','3%')
+Product = cbind.data.frame(Product,Discount)
+
+new_row = data.frame(ProductId = 6, ProductName = 'Washing Machine',Category='Applinces',Price=25000,Stock=5,Discount = "12%")
+Product = rbind(Product,new_row)
+
+Product[Product$ProductName == 'Smartphone','Stock'] = 25
+
+3. Filter and Subset Data
+
+Product[Product$Price > 10000,]
+
+Product[Product$Stock < 20,c('ProductName','Discount')]
+
+Product[Product$Category != 'Clothing',]
+
+
+
+Exercise Set 3: Patient Data Frame
+
+
+Patient = data.frame(
+PatientId = c(201,202,203,204),
+PatientName = c('Alice','Bob','Crol','David'),
+Age = c(45,30,60,50),
+Gender = c('F','M','F','M'),
+Diagnosis = c('Diabetes','Hypertension','Asthma','Diabetes')
+FeePaid = c(2000,1500,2500,2200),)
+
+head(Patient)
+
+Patient[Patient$Age > 40,c('PatientName','Diagnosis')]
+
+Patient[Patient$FeePaid > 2000,]
+
+2. Modify the Data Frame
+
+FollowUp = c('Yes','No','Yes','No')
+Patient = cbind.data.frame(Patient,FollowUp)
+
+new_row = c(205,'Eve',35,'F','Allerdy',1800,'Yes')
+Patient = rbind(Patient,new_row)
+
+Patient[Patient$PatientName == 'David','Diagnosis'] = 'Hypertension'
+
+
+3. Filter and Subset Data
+
+Patient[Patient$Diagnosis == 'Diabetes',]
+Patient[Patient$Gender == 'M',c('PatientName','Age')]
+
+Patient[Patient$FeePaid < 2000,]
+
+
+
+Exercise Set 4: Sales Data Frame
+
+Sale = data.frame(
+SaleId = c(1,2,3,4),
+Product = c('Shoes','Bags','Watches','Hats'),
+Region = c('Nort','East','South','West'),
+Quantity = c(50,30,20,10),
+TotalSales = c(25000,15000,40000,5000))
+
+nrow(Sale)
+ncol(Sale)
+
+Sale[1:3,c('Product','TotalSales')]
+
+Sale[Sale$Region == 'South',]
+
+2. Modify the Data Frame
+
+
+Sale = cbind.data.frame(Sale,Discount  = c('5%','10%','8%','12%'))
+
+Sale = rbind(Sale,c(5,'Jakets','North',15,7500,'10%'))
+
+Sale[Sale$Product == 'Watches','TotalSales'] =45000
+
+
+
+3. Filter and Subset Data
+
+
+
+Sale[Sale$TotalSales > 20000,]
+
+Sale[Sale$Region == 'North',c('Product','Discount')]
+
+3. Create a subset of sales where Quantity is less than 20.
+Sale[Sale$Quantity < 20,]
+
+
+
+
+Exercise Set 5: Course Enrollment Data Frame
+
+
+Students = data.frame(
+StudentId = c(101,102,103,104),
+Name = c('John','Sarah','Mike','Emma'),
+Course = c('Math','Science','English','History'),
+Grade = c('B','A','C','B+'),
+Attendance = c(85,90,75,88))
+
+str(Students)
+
+Students[Students$Grade == 'A' | Students$Grade == 'B+',c('Name','Course')]
+
+Students[Students$Attendance > 80,]
+
+
+2. Modify the Data Frame
+
+
+Students = cbind.data.frame(Students,Scholarship = c('No','Yes','No','Yes'))
+
+Grade = B, Attendance = 92, Scholarship = Yes.
+
+Students = rbind(Student,c(105,'Liam','Math','B',92,'Yes'))
+
+Students[Students$Name == 'Mike','Grade']='B'
+
+
+3. Filter and Subset Data
+
+Students[Students$Attendance > 85,]
+
+Students[Students$Scholarship == 'No',c('Name','Course')]
+
+Students[Students$Course == 'Math' | Students$Course == 'Science',]
+
+
+Exercise Set 6: Car Inventory Data Frame
+
+Cars = data.frame(
+CarId = c(1,2,3,4),
+Make = c('Toyota','Honda','Ford','Tesla'),
+Model = c('Corolla','Civic','Focus','Model 3'),
+Price = c(20000,22000,18000,35000),
+Year = c(2018,2019,2017,2020))
+
+
+Cars[Cars$Year > 2018,c('Make','Price')]
+
+Cars[Cars$Price < 25000,]
+
+
+2. Modify the Data Frame
+
+Cars = cbind.data.frame(Cars,Electric = c('No','No','No','Yes'))
+
+
+Cars = rbind(Cars,c(5,'Nissan','Leaf',30000,2021,'Yes'))
+
+
+Cars[Cars$Make == 'Honda' & Cars$Model == 'Civic','Price'] = 21000
+
+
+3. Filter and Subset Data
+
+Cars[Cars$Electric == 'Yes',]
+
+Cars[Cars$Price > 25000,c('Model','Year')]
+
+
+Cars[Cars$Year < 2020,]
+
+
+Exercise Set 7: Movie Data Frame
+
+Movies <- data.frame(
+  MovieId = c(1, 2, 3, 5),
+  Title = c("Inception", "Titanic", "Avengers", "Interstellar"),
+  Genre = c("Sci-Fi", "Romance", "Action", "Sci-Fi"),
+  Rating = c(8.8, 8, 8.5, 8.6),
+  Revenue = c(850, 2200, 1500, 700),
+  OscarWon = c("Yes", "Yes", "No", "No") )
+
+summary(Movies)
+
+Movies[Movies$Rating > 8,c('Title','Genre')]
+
+2. Modify the Data Frame
+
+1. Add a new column OscarWon with values "Yes", "Yes", "No", "Yes".
+Movies = cbind.data.frame(Movies,OscarWon = c('Yes','Yes','No','Yes'))
+
+2. Add a new movie: MovieID = 5, Title = "Interstellar", Genre = "Sci-Fi",
+Rating = 8.6, Revenue = 700, OscarWon = No.
+Movies = rbind(Movies,c(5,'Interstellar','Sci-Fi',8.6,700,'No'))
+
+3. Update the Rating of "Titanic" to 8.0.
+Movies[Movies$Title == 'Titanic','Rating'] = 8.0
+
+
+3. Filter and Subset Data
+
+1. Display all movies that won an Oscar.
+Movies[Movies$OscarWon == 'Yes',]
+
+2. Extract Title and Revenue for movies in the "Sci-Fi" genre.
+Movies[Movies$Genre == 'Sci-Fi',c('Title','Revenue')]
+
+
+3. Create a subset of movies with Revenue less than 1000.
+
+Movies[Movies$Revenue < 1000,]
