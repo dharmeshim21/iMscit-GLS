@@ -230,26 +230,20 @@ Movies[Movies$Rating > 8,c('Title','Genre')]
 
 2. Modify the Data Frame
 
-1. Add a new column OscarWon with values "Yes", "Yes", "No", "Yes".
 Movies = cbind.data.frame(Movies,OscarWon = c('Yes','Yes','No','Yes'))
 
-2. Add a new movie: MovieID = 5, Title = "Interstellar", Genre = "Sci-Fi",
-Rating = 8.6, Revenue = 700, OscarWon = No.
+
 Movies = rbind(Movies,c(5,'Interstellar','Sci-Fi',8.6,700,'No'))
 
-3. Update the Rating of "Titanic" to 8.0.
 Movies[Movies$Title == 'Titanic','Rating'] = 8.0
 
 
 3. Filter and Subset Data
 
-1. Display all movies that won an Oscar.
 Movies[Movies$OscarWon == 'Yes',]
 
-2. Extract Title and Revenue for movies in the "Sci-Fi" genre.
 Movies[Movies$Genre == 'Sci-Fi',c('Title','Revenue')]
 
 
-3. Create a subset of movies with Revenue less than 1000.
 
 Movies[Movies$Revenue < 1000,]
